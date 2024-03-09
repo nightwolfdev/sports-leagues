@@ -1,0 +1,23 @@
+@if (teams$ | async; as teams) {
+  <div class="clr-row team-list">
+    @for (team of teams; track team.id) {
+      <div class="clr-col-sm-12 clr-col-md-6 clr-col-lg-3">
+        <div class="team">
+          <img [src]="team.logos.length ? team.logos[0].href : 'https://placehold.co/40x40?text=No+Image'" [alt]="team.displayName" class="team-logo">
+          <div class="team-info">
+            <h2 class="team-name">{{ team.displayName }}</h2>
+            @for (link of team.links; track link) {
+              @if (link.href) {
+                <a target="_blank" rel="noopener noreferrer" [href]="link.href" class="team-link">{{ link.text }}</a>
+              }
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+} @else {
+  <p>
+    <clr-spinner></clr-spinner>
+  </p>
+}

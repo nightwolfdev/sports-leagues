@@ -1,0 +1,29 @@
+@if (league$ | async; as league) {
+  <h1 class="league-title">
+    <img [src]="league.logo" [alt]="league.name" class="league-logo">
+    {{ league.name }}
+  </h1>
+
+  <clr-tabs>
+    <clr-tab>
+      <button clrTabLink>News</button>
+      <clr-tab-content *clrIfActive>
+        <app-news-list [sport]="league.sport" [league]="league.league"></app-news-list>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Teams</button>
+      <clr-tab-content *clrIfActive>
+        <app-teams-list [sport]="league.sport" [league]="league.league"></app-teams-list>
+      </clr-tab-content>
+    </clr-tab>
+  </clr-tabs>
+} @else {
+  <clr-alert [clrAlertClosable]="false" [clrAlertType]="'danger'">
+    <clr-alert-item>
+        <span class="alert-text">
+          Sorry, there is no data available for the sport and league provided.
+        </span>
+    </clr-alert-item>
+  </clr-alert>
+}

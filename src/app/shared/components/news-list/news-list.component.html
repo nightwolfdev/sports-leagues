@@ -1,0 +1,23 @@
+@if (news$ | async; as news) {
+  <div class="clr-row news-list">
+    @for (article of news; track article.dataSourceIdentifier) {
+      <div class="clr-col-sm-12 clr-col-md-6 clr-col-lg-4">
+        <div class="card news-article">
+          <div class="card-img">
+            <img [src]="article.images.length ? article.images[0].url : 'https://placehold.co/1000x600?text=No+Image'" [alt]="article.headline">
+          </div>
+          <div class="card-block">
+            <h2 class="card-title">
+              <a target="_blank" rel="noopener noreferrer" [href]="article.links.web.href" class="news-link">{{ article.headline }}</a>
+            </h2>
+            <p>{{ article.description }}</p>
+          </div>        
+        </div>
+      </div>
+    }
+  </div>
+} @else {
+  <p>
+    <clr-spinner></clr-spinner>
+  </p>
+}

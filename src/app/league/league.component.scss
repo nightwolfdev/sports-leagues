@@ -1,0 +1,11 @@
+.league-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.67em;
+
+  .league-logo {
+    max-height: 100px;
+  }
+}

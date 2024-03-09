@@ -1,0 +1,15 @@
+<form clrForm [formGroup]="form">
+  <clr-select-container class="clr-justify-content-center">
+    <label for="sport" class="clr-col-1">Sport</label>
+    <select clrSelect id="sport" name="sport" formControlName="sport" (change)="onChange($event)" class="clr-col-auto">
+      <option value="all">All</option>
+      <option value="baseball">Baseball</option>
+      <option value="basketball">Basketball</option>
+      <option value="football">Football</option>
+      <option value="hockey">Hockey</option>
+      <option value="soccer">Soccer</option>
+    </select>
+  </clr-select-container>
+</form>
+
+<app-leagues-list [leagues]="leagues"></app-leagues-list>

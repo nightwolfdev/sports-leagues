@@ -1,10 +1,10 @@
 {
-  "name": "sports",
+  "name": "sports-leagues",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve -o",
+    "build": "ng build --base-href /sports-leagues/",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
@@ -17,6 +17,9 @@
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
+    "@cds/core": "^6.9.2",
+    "@clr/angular": "^17.0.1",
+    "@clr/ui": "^17.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
