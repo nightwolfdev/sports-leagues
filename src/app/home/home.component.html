@@ -1,6 +1,6 @@
 <form clrForm [formGroup]="form">
-  <clr-select-container class="clr-justify-content-center">
-    <label for="sport" class="clr-col-1">Sport</label>
+  <clr-select-container class="clr-align-items-center clr-justify-content-center">
+    <label for="sport" class="clr-col-sm-2 clr-col-md-1">Sport</label>
     <select clrSelect id="sport" name="sport" formControlName="sport" (change)="onChange($event)" class="clr-col-auto">
       <option value="all">All</option>
       <option value="baseball">Baseball</option>
