@@ -7,9 +7,9 @@ View all leagues or leagues by sport. View league news and teams.
 ## Getting Started
 
 1. Clone the repo  
-  `git clone https://github.com/nightwolfdev/movies.git`
+  `git clone https://github.com/nightwolfdev/sports-leagues.git`
 2. Navigate to the project folder  
-  `cd movies`
+  `cd sports-leagues`
 3. Install dependencies  
   `npm install`
 4. Run the app  
@@ -20,6 +20,7 @@ View all leagues or leagues by sport. View league news and teams.
 ## Links
 
 * [Demo](https://nightwolfdev.github.io/sports-leagues/)
+* [ESPN API](https://espn.com)
 * [Angular](https://angular.io)
 * [Clarity Design System](https://clarity.design/)
 * [RxJS](https://rxjs.dev)
